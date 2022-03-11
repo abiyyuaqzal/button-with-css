@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .subscribe-button {
+            background-color: #cc0000;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-right: 8px;
+            transition: opacity 0.15s;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 16px;
+            padding-left: 16px;
+            vertical-align: top;
+        }
+
+        .subscribe-button:hover {
+            opacity: 0.8;
+        }
+        
+        .subscribe-button:active {
+            opacity: 0.5;
+        }
+
+        .join-button {
+            background-color: white;
+            color: #065fd4;
+            border-color: #065fd4;
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-right: 8px;
+            transition: background-color 0.15s, color 0.5s;
+            padding-top: 9px;
+            padding-bottom: 9px;
+            padding-right: 16px;
+            padding-left: 16px;
+            vertical-align: top;
+        }
+
+        .join-button:hover {
+            background-color: #065fd4;
+            color: white;
+        }
+
+        .join-button:active {
+            opacity: 0.5;
+        }
+
+        .tweet-button {
+            background-color: #1d9bf0;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            padding-top: 7px;
+            padding-bottom: 7px;
+            padding-right: 16px;
+            padding-left: 16px;
+            vertical-align: top;
+        }
+
+        .tweet-button:hover {
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.15)
+        }
+
+        .uber-button{
+            background-color: black;
+            color: white;
+            border: none;
+            height: 40px;
+            width: 127px;
+            cursor: pointer;
+            margin-right: 20px;
+            transition: opacity 0.3s;
+        }
+
+        .uber-button:hover {
+            opacity: 0.8;
+        }
+
+        .amazon-button{
+            background-color: rgb(255,216,20);
+            border: none;
+            height: 40px;
+            width: 160px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 15px;
+            margin-right: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .amazon-button:hover {
+            background-color: rgb(231, 195, 15);
+        }
+
+        .github-button{
+            background-color: rgb(46,164,79);
+            color: white;
+            border: none;
+            height: 40px;
+            width: 100px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+            transition: box-shadow 0.3s;
+        }
+
+        .github-button:hover {
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+        }
+
+        .bootstrap-button-get{
+            background-color: rgb(121,82,179);
+            color: white;
+            border: none;
+            height: 40px;
+            width: 120px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .bootstrap-button-get:hover {
+            background-color: rgb(106, 66, 165);
+        }
+
+        .bootstrap-button-down{
+            background-color: white;
+            border-style: solid;
+            height: 40px;
+            width: 120px;
+            border-width: 1px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .bootstrap-button-down:hover {
+            background-color: rgb(124, 123, 123);
+            color: white;
+        }
+
+        .linkedin-button{
+            background-color: rgb(10,102,194);
+            color: white;
+            border: none;
+            height: 40px;
+            width: 250px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-right: 10px;
+            font-size: 15px;
+            transition: background-color 0.3s;
+        }
+
+        .linkedin-button:hover {
+            background-color: rgb(12, 74, 136);
+        }
+
+        .linkedin-button-save{
+            background-color: white;
+            color: rgb(10,102,194);
+            border-style: solid;
+            border-color: rgb(10,102,194);
+            height: 40px;
+            width: 80px;
+            border-radius: 20px;
+            border-width: 1px;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .linkedin-button-save:hover {
+            background-color: rgb(188, 215, 243);
+            border-width: 2px;
+        }
+
+        .link-to-amazon{
+            color: rgb(0,113,133);
+        }
+
+        .link-to-amazon:hover {
+            color: rgb(255,164,28);
+        }
+
+        .product-price{
+            color: rgb(0,118,0);
+            font-weight: bold;
+        }
+
+        .product-add-button{
+            background-color: rgb(255,216,20);
+            border: none;
+            height: 30px;
+            width: 110px;
+            border-radius: 15px;
+            margin-right: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .product-add-button:hover {
+            background-color: rgb(218, 181, 0);
+        }
+
+        .product-add-button:active {
+            opacity: 0.5;
+        }
+
+        .product-buy-button{
+            background-color: rgb(255,164,28);
+            border: none;
+            height: 30px;
+            width: 110px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .product-buy-button:hover {
+            background-color: rgb(209, 131, 13);
+        }
+
+        .product-buy-button:active {
+            opacity: 0.5;
+        }
+
+        .back {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .next {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .satu {
+            margin-left: 10px;
+            margin-right: 5px;
+        }
+
+        .dua {
+            margin-right: 5px;
+        }
+
+        .tiga {
+            margin-right: 5px;
+        }
+
+        .empat {
+            margin-right: 5px;
+        }
+
+        .lima {
+            margin-right: 10px;
+        }
+
+        .stretch {
+            background-color: green;
+            color: white;
+            border: none;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 16px;
+            padding-right: 16px;
+            transition: font-size 0.3s;
+            cursor: pointer;
+        }
+
+        .stretch:hover {
+            font-size: 30px;
+        }
+
+        .shadow {
+            background-color: green;
+            color: white;
+            border: none;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 16px;
+            padding-right: 16px;
+            box-shadow: 5px 5px 10px rgba(0,0,0, 0.5);
+            cursor: pointer;
+        }
+
+        .shadow:active {
+            box-shadow: none;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+
+        .one {
+            background-color: green;
+            border: none;
+            color: white;
+            margin-left: 50px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-right: 50px;
+            transition: padding-left 0.5s, padding-right 0.5s, margin-right 0.5s, margin-left 0.5s;
+        }
+
+        .one:hover {
+            padding-left: 30px;
+            margin-left: 40px;
+            padding-right: 30px;
+            margin-right: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <button class="subscribe-button">SUBSCRIBE</button>
+    <button class="join-button">JOIN</button>
+    <button class="tweet-button">Tweet</button>
+
+    <p></p>
+
+    <!-- uber button  -->
+    <button class="uber-button">Request Now</button>
+
+    <!-- amazon button -->
+    <button class="amazon-button">Add to Cart</button>
+
+    <!-- github button -->
+    <button class="github-button">Sign up</button><br><br><br><br>
+
+    <!-- bootstrap button -->
+    <button class="bootstrap-button-get">Get started</button>
+    <button class="bootstrap-button-down">Download</button><br><br><br><br>
+
+    <!-- linkedin button -->
+    <button class="linkedin-button">Apply on company website</button>
+    <button class="linkedin-button-save">Save</button><br><br><br><br>
+
+    <a class="link-to-amazon" href="https://www.amazon.com/">Back to Amazon</a>
+
+    <h2 class="product-title">Nike Black Running Shoes</h2>
+    <p class="product-price">$39 - in stock.</p>
+    <p>Free delivery tomorrow.</p>
+
+    <button class="product-add-button">Add to Cart</button>
+    <button class="product-buy-button">Buy Now</button>
+
+    <p></p>
+
+    <!-- pagination -->
+    <h3>Pagination</h3>
+    <button class="back">Back</button>
+    <a href="#" class="satu">1</a>
+    <a href="#" class="dua">2</a>
+    <a href="#" class="tiga">3</a>
+    <a href="#" class="empat">4</a>
+    <a href="#" class="lima">5</a>
+    <button class="next">Next</button>
+
+    <!-- stretch -->
+    <h3>Stretch</h3>
+    <button class="stretch">Stretch</button>
+
+    <!-- 3D Click -->
+    <h3>Shadow</h3>
+    <button class="shadow">Shadow</button>
+
+    <!-- margin and padding together -->
+    <h3>Margin and Padding Together</h3>
+    <button class="one">One</button>
+    <button class="one">Two</button>
+    <button class="one">Three</button>
+
+</body>
+</html>
